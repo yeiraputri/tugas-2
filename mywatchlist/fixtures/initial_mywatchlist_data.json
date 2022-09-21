@@ -1,0 +1,122 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "watched": true ,
+            "title":"Sherlock",
+            "rating": 4,
+            "release_date": 2010,
+            "review": "top tier detective show !!"
+
+        }
+},
+{
+    "model":"mywatchlist.mywatchlist",
+    "pk":2,
+    "fields":{
+        "watched": true ,
+        "title":"Life on Mars",
+        "rating": 4,
+        "release_date": 2018,
+        "review": "best tv series adaption"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "watched": false ,
+            "title":"Defending Jacob",
+            "rating": 2,
+            "release_date": 2020,
+            "review": "interested just bcs of chris evans"
+        }
+    },
+
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "watched": true ,
+            "title":"Dexter",
+            "rating": 3,
+            "release_date": 2006,
+            "review": "killing and stuff"
+        }
+    },
+
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "watched": true ,
+            "title":"New Girl",
+            "rating": 4,
+            "release_date": 2011,
+            "review": "Nick my beloved <3"
+        }
+    },
+
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "watched": true ,
+            "title":"How I Met Your Mother",
+            "rating": 4,
+            "release_date": 2005,
+            "review": "Legendary !"
+        }
+    },
+
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "watched": true ,
+            "title":"The K2",
+            "rating": 2,
+            "release_date": 2016,
+            "review": "mid plot but here for chang wook"
+        }
+    },
+
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "watched": true ,
+            "title":"Extraordinarry Attorney Woo",
+            "rating": 5,
+            "release_date": 2022,
+            "review": "JUNHO GUE SAYANG SAMA LO MUAH"
+        }
+    },
+
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "watched": true ,
+            "title":"Mr Robot",
+            "rating": 5,
+            "release_date": 2015,
+            "review": "Hello, Elliot"
+        }
+    },
+
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "watched": true ,
+            "title":"White Collar",
+            "rating": 4,
+            "release_date": 2009,
+            "review": "Still waiting for another season..."
+        }
+    }
+
+    
+]
