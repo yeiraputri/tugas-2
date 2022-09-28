@@ -1,0 +1,52 @@
+<div>
+    <div class="header" style="text-align: center">
+        <p>Hello {{username}}</p>
+    </div>
+  
+    <table style="border:1px ;margin-left:auto;margin-right:auto;">
+        {% if task_count > 0 %}
+        <tr>
+            <th>Date</th>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Status</th>
+        </tr>
+        {% endif %}
+  
+        {% if task_count == 0 %}
+        <tr>
+            <th>Belum ada task yang dibuat</th>
+        </tr>
+        {% endif %}
+  
+  
+        {% comment %} Add the data below this line {% endcomment %}
+        {% for todo in list_barang %}
+        <tr>
+            <th>{{todo.date}}</th>
+            <th>{{todo.title}}</th>
+            <th>{{todo.description}}</th>
+            <th>
+                {% if todo.status %}
+                Done
+                {% else %}
+                Not Done
+                {% endif %}
+            </th>
+          
+            <th>
+            <button><a href="{% url 'todolist:change' todo.id %}" title="">Change Status</a></button>
+            <button><a href="{% url 'todolist:delete' todo.id %}" title="">Delete</a></button>
+            </th>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <div style="text-align: center">
+        <button onclick="location.href='/todolist/create-task'">Create New Task</button>
+        <button><a href="{% url 'todolist:logout_user' %}">Logout</a></button>
+        <h5>Sesi terakhir login: {{ last_login }}</h5>
+
+    </div>
+</div>

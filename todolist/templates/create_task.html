@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Create New Todo List</title>
+{% endblock meta %}
+
+{% block content %}
+
+<div class = "create">
+
+    <h1>Add New Task</h1>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Task:</td>
+                <td><input type="text" name="task" placeholder = "task" class="form-control"></td>
+            </tr>
+                    
+            <tr>
+                <td>Description: </td>
+                <td><input type="text" name="description" placeholder = "description" class="form-control"></td>
+            </tr>
+        </table>
+
+        <input type="submit" name="submit" value="Add"/>
+    </form>
+
+
+</div>
+
+{% endblock content %}
