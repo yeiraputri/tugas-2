@@ -27,7 +27,7 @@
             <th>{{todo.title}}</th>
             <th>{{todo.description}}</th>
             <th>
-                {% if todo.status %}
+                {% if todo.is_finished %}
                 Done
                 {% else %}
                 Not Done

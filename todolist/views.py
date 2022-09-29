@@ -64,7 +64,7 @@ def create_task(request):
             description = request.POST.get('description'),
             date = datetime.datetime.now(),
             user = request.user,
-            status = False)
+            is_finished = False)
         task.save()
         return redirect('todolist:show_todolist')
     return render(request, 'create_task.html')
@@ -76,6 +76,6 @@ def delete(request, id):
 
 def change(request, id):
     change = Task.objects.get(id = id)
-    change.status = not(change.status)
+    change.is_finished = not(change.is_finished)
     change.save()
     return redirect('todolist:show_todolist')
