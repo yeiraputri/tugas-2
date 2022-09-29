@@ -11,9 +11,9 @@
             <th>Description</th>
             <th>Status</th>
         </tr>
-        {% endif %}
+        {% else %}
   
-        {% if task_count == 0 %}
+      
         <tr>
             <th>Belum ada task yang dibuat</th>
         </tr>
@@ -28,9 +28,9 @@
             <th>{{todo.description}}</th>
             <th>
                 {% if todo.is_finished %}
-                Done
+                Selesai
                 {% else %}
-                Not Done
+                Belum Selesai
                 {% endif %}
             </th>
           

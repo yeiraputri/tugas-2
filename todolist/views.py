@@ -20,6 +20,7 @@ def show_todolist(request):
     'nama': 'Yeira',
     'id': '2106751726',
     'last_login': request.COOKIES['last_login'],
+    'task_count': data_todolist.count()
     }
     return render(request, "todolist.html", context)
 
