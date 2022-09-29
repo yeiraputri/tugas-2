@@ -187,4 +187,5 @@ Membuat html yang menampilkan form untuk menambahkan form baru
 </div>
 ```
 
-#### Menambahkan routing untuk semua fungsi pada `views.py` ke dalam `urls.py` pada folder `todolist`
+#### Ketujuh
+Menambahkan routing untuk semua fungsi pada `views.py` ke dalam `urls.py` pada folder `todolist`
