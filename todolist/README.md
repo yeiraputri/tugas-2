@@ -189,3 +189,37 @@ Membuat html yang menampilkan form untuk menambahkan form baru
 
 #### Ketujuh
 Menambahkan routing untuk semua fungsi pada `views.py` ke dalam `urls.py` pada folder `todolist`
+---
+
+# Tugas 5
+
+### Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+* Inline : kode CSS diletakkan dalam tag elemen HTML dengan atribut 'style'. Kelebihan : Perubahan dapat dengan mudah dilakukan dan style dapat dengan mudah diuji coba. 
+Kekurangan : Ketika menerapkan style yang sama ke elemen yang berbeda kurang efektif yang membuat file HTML menjadi penuh dan kurang rapi
+* Internal : kode CSS diletakkan dalam bagian <head> di file HTML dalam tag <style></style> 
+Kelebihan : style dapat dengan mudah untuk diterapkan di suatu halaman HTML sehingga tidak bercampur-campur dengan HTML lain. 
+Kekurangan : melambatnya loading time karena ketika menambahkan kode CSS ke dalam file akan memperbesar ukuran memori dari HTML yang membuat 
+* External : kode CSS diletakkan di file khusus .css dan dihubungkan ke file HTML dengan mencantumkan link atau file .css 
+Kelebihan :  kode CSS dapat digunakan untuk beberapa halaman HTML 
+Kekurangan : ketika ada perubahan, halaman HTML berpotensi tidak dapat dirender dengan benar.
+
+### Jelaskan tag HTML5 yang kamu ketahui.
+* <b>: Membuat text menjadi bold
+* <br>: Menambahkan break line
+* <button>: Membuat button
+* <p> : Menambahkan text atau paragraf
+* <data>: Me-link konten dengan terjemahan yang bisa dibaca mesin
+* <form>: Mendefinisikan form HTML untuk input user
+* <html>: Mendefinisikan root dokumen HTML
+
+### Jelaskan tipe-tipe CSS selector yang kamu ketahui
+* Selektor Class: Diberikan titik di depannya di nama elemen untuk selektor yang akan diberikan elemen
+* Selektor Tag dapat disebut sebagai type selector dan memiliki elemen berdasarkan nama tag.
+* Selektor Atribut: Mirip dengan selektor Tag, selektor Atribut memiliki elemen berdasarkan atribut.
+* Selektor ID: Mirip dengan selektor Class, tetapi hanya dapat digunakan oleh satu elemen saja (unik) yang ditandai dengan tanda # didepannya.
+* Selektor Universal: Selektor yang digunakan untuk menyeleksi elemen pada scope tertentu
+* Pseudo Selektor: Selektor untuk menyeleksi elemen-elemen semu seperti state dari suatu elemen, elemen before dan after, dsb. Terdapat 2 macam pseudo selektor, yaitu pseudo class selektor untuk state elemen dan pseudo-element selektor untuk elemen semu di HTML.
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+Menambahkan styling terhadap semua file html, berupa border, background, font, alignment, dan lainnya.
+Pada file todolist.html membuat card untuk menampilkan masing-masing task yang terdapat pada setiap akun.
