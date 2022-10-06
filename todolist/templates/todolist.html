@@ -1,52 +1,111 @@
-<div>
-    <div class="header" style="text-align: center">
-        <p>Hello {{username}}</p>
-    </div>
+<!doctype html>
+
+<style>
+    .navbar{
+        background-color: rgba(248, 237, 227, 1);
+    }
+
+    .card{
+        background-color: rgba(248, 237, 227, 1) !important;
+    }
+
+    .card:hover{
+    background-color: rgb(197, 154, 113) !important;
+    transform: scale(1.09);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
   
-    <table style="border:1px ;margin-left:auto;margin-right:auto;">
-        {% if task_count > 0 %}
-        <tr>
-            <th>Date</th>
-            <th>Task</th>
-            <th>Description</th>
-            <th>Status</th>
-        </tr>
-        {% else %}
+
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="nav-item dropdown px-3 ">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black">
+                <img src="https://img2.pngdownload.id/20180712/lzt/kisspng-domestic-duck-the-ugly-duckling-clip-art-child-side-5b471f5361c773.9232129515313877314005.jpg" alt="Bootstrap" width="30" height="24">
+            </a>
+            <div class="dropdown-menu">
+                
+                <a class="nav-link" href="{% url 'todolist:logout_user' %}">Logout</a>
+                  
   
-      
-        <tr>
-            <th>Belum ada task yang dibuat</th>
-        </tr>
-        {% endif %}
-  
-  
-        {% comment %} Add the data below this line {% endcomment %}
-        {% for todo in list_barang %}
-        <tr>
-            <th>{{todo.date}}</th>
-            <th>{{todo.title}}</th>
-            <th>{{todo.description}}</th>
-            <th>
-                {% if todo.is_finished %}
-                Selesai
-                {% else %}
-                Belum Selesai
-                {% endif %}
-            </th>
+            </div>
+           
+            
+        </div>
+        <div class="container-fluid justify-content-end">
+            <a class="navbar-brand" href="#" style = "color:black">Hi, {{username}}!</a>
+            
+            
+            
+        </div>
+      </nav>
+
+    
+
+    <div class="container">
+      <br>
+      <h1 class="text-center">TO-DO LIST</h1>
+      <br>
+      <div class ="row">
+        
           
-            <th>
-            <button><a href="{% url 'todolist:change' todo.id %}" title="">Change Status</a></button>
-            <button><a href="{% url 'todolist:delete' todo.id %}" title="">Delete</a></button>
-            </th>
-        </tr>
+        
+        {% for todo in list_barang %}
+          <div class ="col-12 col-md-6 col-lg-4">
+            <div class ="card">
+              <h5 class="card-header d-flex justify-content-between align-items-center" id="apakek">
+                Task : {{todo.title}}
+              </h5>
+              <div class="card-body">
+                
+                <h5 class="card-title">Date : {{todo.date}}</h5>
+                <h5 class="card-title">Description : {{todo.description}}</h5>
+                <h5 class="card-title">
+                  Status : 
+                  {% if todo.is_finished %}
+                  Selesai
+                  {% else %}
+                  Belum Selesai
+                  {% endif %}
+                </h5>
+                
+                
+              </div>
+
+              <h5 class="card-footer d-flex justify-content-around">
+                <div>
+                <button class ="btn btn-outline-dark btn-light text-decoration-none text-white" ><a href="{% url 'todolist:change' todo.id %}" title="">Change Status</a></button>
+                <button class ="btn btn-outline-dark btn-light text-decoration-none text-white"><a href="{% url 'todolist:delete' todo.id %}" title="">Delete</a></button>
+            </div>
+              
+            </div>
+          </div>
         {% endfor %}
-    </table>
+      </div>
+    </div>
 
     <br>
+    <br>
     <div style="text-align: center">
-        <button onclick="location.href='/todolist/create-task'">Create New Task</button>
-        <button><a href="{% url 'todolist:logout_user' %}">Logout</a></button>
-        <h5>Sesi terakhir login: {{ last_login }}</h5>
+
+      <button class ="btn btn-outline-dark btn-light text-decoration-none text-white" ><a href="{% url 'todolist:create_task'  %}" title="">Create Task</a></button>
+                
+      <!-- <button onclick="location.href='/todolist/create-task'">Create New Task</button>
+      <button><a href="{% url 'todolist:logout_user' %}">Logout</a></button> -->
+      
 
     </div>
-</div>
+    
+  </body>
+</html>
