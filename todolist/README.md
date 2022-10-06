@@ -204,13 +204,13 @@ Kelebihan :  kode CSS dapat digunakan untuk beberapa halaman HTML
 Kekurangan : ketika ada perubahan, halaman HTML berpotensi tidak dapat dirender dengan benar.
 
 ### Jelaskan tag HTML5 yang kamu ketahui.
-* <b>: Membuat text menjadi bold
-* <br>: Menambahkan break line
-* <button>: Membuat button
-* <p> : Menambahkan text atau paragraf
-* <data>: Me-link konten dengan terjemahan yang bisa dibaca mesin
-* <form>: Mendefinisikan form HTML untuk input user
-* <html>: Mendefinisikan root dokumen HTML
+* ```<b>```: Membuat text menjadi bold
+* ```<br>```: Menambahkan break line
+* ```<button>```: Membuat button
+* ```<p>``` : Menambahkan text atau paragraf
+* ```<data>```: Me-link konten dengan terjemahan yang bisa dibaca mesin
+* ```<form>```: Mendefinisikan form HTML untuk input user
+* ```<html>```: Mendefinisikan root dokumen HTML
 
 ### Jelaskan tipe-tipe CSS selector yang kamu ketahui
 * Selektor Class: Diberikan titik di depannya di nama elemen untuk selektor yang akan diberikan elemen
